@@ -5,7 +5,8 @@
 -- opensea."WyvernExchange_evt_OrdersMatched"
 
 
-WITH token AS (
+WITH 
+token AS (
     SELECT 
         call_tx_hash AS tx_hash,
         CASE

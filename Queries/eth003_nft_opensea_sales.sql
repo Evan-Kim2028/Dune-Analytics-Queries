@@ -8,7 +8,8 @@
 -- prices."usd"
 -- nft."tokens"
 
-WITH token AS (
+WITH 
+token AS (
     SELECT 
         call_tx_hash AS tx_hash, 
           CASE

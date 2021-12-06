@@ -4,7 +4,8 @@
 -- BEP20 evt transfers - bep20."BEP20_evt_Transfer"
 -- track checkpoints for token holder amount - impossible_finance."IFAllocationMaster_evt_AddTrackCheckpoint"
 
-WITH transfers AS (
+WITH 
+transfers AS (
     SELECT  
         day,
         address, 

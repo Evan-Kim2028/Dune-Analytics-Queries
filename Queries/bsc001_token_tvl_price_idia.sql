@@ -6,7 +6,8 @@
 -- price tables 
 
 
-WITH buy_data AS (
+WITH 
+buy_data AS (
     SELECT 
         date_trunc('minute',"call_block_time") AS minute,
         avg((tx."value"/1e18)/("amountOut"/1e18)) AS implied_bnb_per_idia
