@@ -1,7 +1,10 @@
+
+-- data used:
+-- prices."usd"
 WITH 
 price_data AS (
-    SELECT date_trunc('week', minute) AS week, symbol, price from prices."usd"
-    WHERE symbol in ('UMA', 'WETH', 'MATIC', 'USDT','USDC')
+    SELECT date_trunc('week', minute) AS week, symbol, price FROM prices."usd"
+    WHERE symbol IN ('UMA', 'WETH', 'MATIC', 'USDT','USDC')
     AND minute > NOW() - interval '90 day'
 ),
 avg_price_data AS (
@@ -18,5 +21,5 @@ avg_price_data_final AS (
     ORDER BY 1 DESC
 )
 
-SELECT * from avg_price_data_final
+SELECT * FROM avg_price_data_final
 LIMIT 5
